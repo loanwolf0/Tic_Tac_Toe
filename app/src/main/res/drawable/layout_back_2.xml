@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <stroke
+        android:width="2dp"
+        android:color="@color/om_shanti_color_2"/>
+    <corners
+        android:radius="20dp"/>
+    <gradient
+        android:startColor="@color/name_back_2"
+        android:endColor="@color/name_back_2"/>
+</shape>

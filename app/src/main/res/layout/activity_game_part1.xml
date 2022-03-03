@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10"
+    tools:context=".game_part_1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="10">
+
+
+
+        <LinearLayout
+            android:id="@+id/F1st_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="9.8"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tic_tac_toe"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/layout_back_3"
+                    android:gravity="center"
+                    android:text="TIC TAC TOE"
+                    android:textColor="@color/purple_500"
+                    android:textSize="50sp"
+                    android:textStyle="bold"
+
+                    />
+
+                <TextView
+                    android:id="@+id/player_turn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_horizontal"
+                    android:layout_below="@id/tic_tac_toe"
+                    android:text="X  turn"
+                    android:textColor="@color/teal_200"
+                    android:textSize="40sp" />
+
+<!--                after winning the game -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/winner_win"
+                    android:visibility="invisible"
+                    android:layout_below="@id/player_turn"
+                    android:layout_marginTop="-30dp"
+                    android:padding="10dp"
+                    >
+
+                    <pl.droidsonroids.gif.GifImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="110dp"
+                        android:src="@drawable/giphy"
+                        android:layout_marginTop="20dp"
+
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/winner_name"
+                        android:layout_gravity="center_horizontal"
+                        android:text=" WINNER "
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="-30dp"
+                        android:gravity="center"
+                        android:textColor="@color/teal_200"
+                        android:textSize="40sp"
+                        android:textStyle="bold"
+
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="IS WINNER "
+                        android:gravity="center"
+                        android:layout_marginLeft="70dp"
+                        android:textColor="@color/om_shanti_color_2"
+                        android:textSize="20dp"
+                        android:textStyle="bold|italic"
+
+                        />
+                </LinearLayout>
+
+<!--                after winning the game end-->
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/players_id"
+                    android:layout_below="@id/player_turn"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:weightSum="3">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight=".9"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/player_x_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:gravity="center_horizontal"
+                            android:text="player x "
+                            android:textColor="@color/x_2"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/player_x_score"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="0"
+                            android:textColor="@color/player_x"
+                            android:textSize="35sp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".9"
+                        android:orientation="vertical"
+                        android:layout_gravity="center_horizontal"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:textStyle="normal"
+                            android:text="Total Match "
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+
+                            />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/tie_matches"
+                                android:layout_marginTop="5dp"
+                                android:text="0"
+                                android:gravity="center_horizontal"
+                                android:textColor="@color/purple_200"
+                                android:layout_marginBottom="5dp"
+                                android:textSize="35sp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="/"
+                                android:textSize="45sp"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/total_matches"
+                                android:text="0"
+                                android:textSize="35sp"
+                                android:textColor="@color/teal_200"/>
+
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight=".9"
+                        android:gravity="center_horizontal"
+
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/player_o_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="player o "
+                            android:textColor="@color/x_2"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/player_o_score"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="0"
+                            android:textColor="@color/player_o"
+                            android:textSize="35sp" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/players_id"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="40dp"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center_horizontal"
+
+                        >
+
+                        <Button
+                            android:id="@+id/btn1"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_margin="4dp"
+                            android:tag="0"
+                            android:background="@drawable/layout_4"
+                            android:textSize="40sp" />
+
+                        <Button
+                            android:id="@+id/btn2"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_margin="4dp"
+                            android:background="@drawable/layout_4"
+                            android:tag="1"
+                            android:textColor="@color/black"
+                            android:textSize="40sp" />
+
+                        <Button
+                            android:id="@+id/btn3"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_margin="4dp"
+                            android:tag="2"
+                            android:background="@drawable/layout_4"
+                            android:textColor="@color/black"
+                            android:textSize="40sp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center_horizontal"
+
+                        >
+
+                        <Button
+                            android:id="@+id/btn4"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_margin="4dp"
+                            android:tag="3"
+                            android:background="@drawable/layout_4"
+                            android:textColor="@color/black"
+                            android:textSize="40sp" />
+
+                        <Button
+                            android:id="@+id/btn5"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_margin="4dp"
+                            android:background="@drawable/layout_4"
+                            android:tag="4"
+                            android:textColor="@color/black"
+                            android:textSize="40sp" />
+
+                        <Button
+                            android:id="@+id/btn6"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_margin="4dp"
+                            android:background="@drawable/layout_4"
+                            android:tag="5"
+                            android:textColor="@color/black"
+                            android:textSize="40sp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center_horizontal">
+
+                        <Button
+                            android:id="@+id/btn7"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_margin="4dp"
+                            android:background="@drawable/layout_4"
+                            android:tag="6"
+                            android:textColor="@color/black"
+                            android:textSize="40sp" />
+
+                        <Button
+                            android:id="@+id/btn8"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_margin="4dp"
+                            android:background="@drawable/layout_4"
+                            android:tag="7"
+                            android:textColor="@color/black"
+                            android:textSize="40sp" />
+
+                        <Button
+                            android:id="@+id/btn9"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_margin="4dp"
+                            android:background="@drawable/layout_4"
+                            android:tag="8"
+                            android:textColor="@color/black"
+                            android:textSize="40sp" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    >
+
+                    <ImageButton
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:layout_marginTop="20dp"
+                        android:visibility="invisible"
+                        android:id="@+id/refresh"
+                        android:src="@drawable/ic_baseline_refresh_24"
+                        android:background="@drawable/btn_12"
+                        />
+
+                </LinearLayout>
+
+
+
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/show_history"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="30dp"
+                    android:onClick="showHistory"
+                    android:src="@drawable/ic_baseline_history_toggle_off_24"
+                    android:textAlignment="center"
+                    />
+
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:text="Total matches = Tie matches / Total matches "
+                android:gravity="center_horizontal"
+                android:textColor="@color/purple_200" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:id="@+id/powered_by_Anurag_shukla"
+                android:layout_gravity="center_horizontal"
+                android:text=" Powered by Anurag shukla"
+                android:textColor="@color/om_color"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</ScrollView>
